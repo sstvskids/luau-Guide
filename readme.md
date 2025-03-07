@@ -62,3 +62,41 @@ local Players: Players = game:GetService('Players') -- gets the players service
   ```lua
   local remainder = 10 % 3 -- Returns 1
   ```
+
+## Operator Comparison
+- `==` Equal to
+
+  ```lua
+  print(5 == 5) -- Returns true
+  print(5 == 6) -- Returns false
+  ```
+- `<` Less than
+
+  ```lua
+  print(3 < 5) -- Returns true
+  print(5 < 3) -- Returns false
+  ```
+- `>` Greater than
+
+  ```lua
+  print(5 > 3) -- Returns true
+  print(3 > 5) -- Returns false
+  ```
+- `<=` Less than or equal to
+
+  ```lua
+  print(3 <= 3) -- Returns true
+  print(4 <= 3) -- Returns false
+  ```
+- `>=` Greater than or equal to
+
+  ```lua
+  print(3 >= 3) -- Returns true
+  print(2 >= 3) -- Returns false
+  ```
+- `~=` Not equal to
+
+  ```lua
+  print(5 ~= 6) -- Returns true
+  print(5 ~= 5) -- Returns false
+  ```
