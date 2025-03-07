@@ -141,11 +141,15 @@ Metatables allow you to change the behavior of a table by defining special funct
 ```lua
 local table = {}
 local metatable = {
-    __index = function()
-        return print('yap')
+    -- __index is called when accessing a key that doesn't exist in the table
+    __index = function(tbl, key)
+        print('yap')
+        return 'yap'
     end,
-    __newindex = function()
-        return print('yap')
+    -- __newindex is called when setting a value for a key that doesn't exist
+    __newindex = function(tbl, key, value)
+        print('yap')
+        rawset(tbl, key, value)
     end
 }
 
