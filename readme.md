@@ -26,9 +26,45 @@ an4rch()
 Booleans are (true or false). Variables require two arguments. (name, (string, function or service or boolean))
 ```lua
 local Skibidi = 'string' -- This is a string ''.
-local Hawk = an4rch() -- A function
+local Hawk = an4rch() -- Function inside a variable
 local skibid = false -- Returns false
 local Players: Players = game:GetService('Players') -- gets the players service
+```
+
+## Tables
+Tables in Lua are powerful data structures that can be used as arrays, dictionaries, objects, functions and more.
+```lua
+-- Creating a basic table
+local table = {
+    tee = 'test',        -- Key-value pair (dictionary style)
+    funcs = {            -- Nested table
+        an4rch = an4rch()
+    },
+    "first",             -- Array-style element (index 1)
+    "second",            -- Array-style element (index 2)
+    123                  -- Array-style element (index 3)
+}
+-- Accessing table elements
+print(table.tee)         -- Outputs: test
+print(table["tee"])      -- Alternative way to access, outputs: test
+print(table[1])          -- Outputs: first (array-style access)
+-- Iterates through a table with pairs() (for dictionaries)
+for i,v in pairs(table) do
+    print(i,v)
+end
+-- Iterates through array portion with ipairs() (for arrays)
+for i,v in ipairs(table) do
+    print(i,v)
+end
+-- Table manipulation
+table.newKey = "new value"   -- Add new key-value pair
+table[4] = "fourth"          -- Add to array portion
+table.tee = nil              -- Removes a key
+-- Table functions
+print(#table)                -- Length of array portion
+table.insert(table, "fifth") -- Add to end of array portion
+table.remove(table, 1)       -- Remove first array element
+table.concat({"a", "b", "c"}, "-") -- Join array elements (outputs: a-b-c)
 ```
 
 # Operators
@@ -100,3 +136,17 @@ local Players: Players = game:GetService('Players') -- gets the players service
   print(5 ~= 6) -- Returns true
   print(5 ~= 5) -- Returns false
   ```
+## String Functions
+```lua
+-- string.split() divides a string by separator
+local text = "apple,banana,orange"
+local fruits = string.split(text, ",")  -- Returns {"apple", "banana", "orange"}
+
+-- string.pack() and string.unpack() for binary data
+local packed = string.pack("ii", 123, 456)    -- Packs numbers into binary
+local num1, num2 = string.unpack("ii", packed) -- Unpacks back to numbers
+
+-- tostring() turns the result into a string
+local math = math.random(1,999)
+print(tostring(math))
+```
