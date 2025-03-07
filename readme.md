@@ -5,12 +5,11 @@
 Explains luaU for exploits in a user-friendly way!
 
 ## Printing/Comments
-There are 3 types of print. (error, warn and print)
+There are 3 types of print, (error, warn and print). Error has a second argument called (level), however its not required.
 ```lua
 print('test')
 warn('yo')
-error('real') -- Error has a second argument called level, however it's not necessary! This is a comment also.
---[[ this also works ]]
+error('real') -- A comment
 ```
 
 ## Functions
