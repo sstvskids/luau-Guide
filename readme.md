@@ -135,3 +135,20 @@ local num1, num2 = string.unpack("ii", packed) -- Unpacks back to numbers
 local math = math.random(1,999)
 print(tostring(math))
 ```
+
+## Metatables
+Metatables allow you to change the behavior of a table by defining special functions that are called when certain operations are performed on the table.
+```lua
+local table = {}
+local metatable = {
+    __index = function()
+        return print('yap')
+    end,
+    __newindex = function()
+        return print('yap')
+    end
+}
+
+setmetatable(table, metatable)
+print(table.metatable)
+```
