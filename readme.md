@@ -34,6 +34,7 @@ local Players: Players = game:GetService('Players') -- gets the players service
 ## Tables
 Tables in luaU are powerful data structures that can be used as arrays, dictionaries, objects, functions and more.
 ```lua
+an4rch = function() return 'asteria' end
 local table = {
     test = 'yuh', -- Value of the key 'test'
     funcs = { -- Table in a table
@@ -50,6 +51,11 @@ print(table[1]) -- outputs 'first', in index[1] of the table
 table.insert(table, 'new') -- adds 'new' to the end of the table
 table.remove(table, 1) -- removes the first element of the table
 table.concat({"a", "b", "c"}, "-") -- joins array elements (output: abc)
+
+-- Loops (loop around the table)
+for i,v in pairs(table) do
+    print(v)
+end
 ```
 
 # Operators
