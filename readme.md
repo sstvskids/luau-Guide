@@ -139,6 +139,13 @@ local num1, num2 = string.unpack("ii", packed) -- Unpacks back to numbers
 -- tostring() turns the result into a string
 local math = math.random(1,999)
 print(tostring(math))
+
+-- string.find() finds a string, string:gsub() for removing lines
+local e = 'balls-eeee'
+if string.find(e, 'balls') then -- finds the string balls
+    e = string.gsub(platform, 'balls-', '')
+end
+print(e)
 ```
 
 ## Metatables
