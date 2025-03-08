@@ -140,10 +140,10 @@ local num1, num2 = string.unpack("ii", packed) -- Unpacks back to numbers
 local math = math.random(1,999)
 print(tostring(math))
 
--- string.find() finds a string, string:gsub() for removing lines
+-- string.find() searches for a pattern in a string and returns its position, string:gsub() replaces pattern matches in a string
 local e = 'balls-eeee'
 if string.find(e, 'balls') then -- finds the string balls
-    e = string.gsub(platform, 'balls-', '')
+    e = string.gsub(platform, 'balls-', '') -- replaces balls- with '' (nil)
 end
 print(e)
 ```
