@@ -169,4 +169,5 @@ setmetatable(table, metatable)
 print(table.metatable)
 ```
 
-Exploit Functions: [here](https://github.com/sentinel-lua/exploit-functions/blob/main/main)
+> [!IMPORTANT]
+> For every exploit function: [here](https://github.com/sentinel-lua/exploit-functions/blob/main/main)
