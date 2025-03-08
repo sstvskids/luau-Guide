@@ -22,7 +22,7 @@ an4rch()
 ```
 
 ## Variables, Booleans, Services
-Booleans are (true or false). Variables require two arguments. (name, (string, function or service or boolean))
+Booleans are (true or false). Variables require two arguments. (name, (string or function or service or boolean))
 ```lua
 local Skibidi = 'string' -- This is a string ''.
 local Hawk = an4rch() -- Function inside a variable
